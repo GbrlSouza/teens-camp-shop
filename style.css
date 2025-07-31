@@ -1,0 +1,89 @@
+:root {
+    --primary-red: #e63946;
+    --primary-black: #1d1d1d;
+    --primary-gray: #f1faee;
+    --primary-white: #ffffff;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--primary-white);
+    color: var(--primary-black);
+}
+
+.title-outline {
+    -webkit-text-stroke: 2px var(--primary-red);
+    color: transparent;
+    text-shadow: 0 0 10px rgba(230, 57, 70, 0.5);
+}
+
+.bg-gradient-red {
+    background: linear-gradient(135deg, rgba(230,57,70,0.1) 0%, rgba(255,255,255,1) 100%);
+}
+
+.bg-gradient-black {
+    background: linear-gradient(135deg, rgba(29,29,29,0.1) 0%, rgba(255,255,255,1) 100%);
+}
+
+.product-card {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
+}
+
+.product-image {
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.neon-hover:hover {
+    text-shadow: 0 0 5px rgba(230, 57, 70, 0.8);
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--primary-red);
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.cross-bg {
+    position: absolute;
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.lion-bg {
+    position: absolute;
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.cart-item {
+    transition: all 0.3s ease;
+}
+
+.cart-item:hover {
+    background-color: rgba(230, 57, 70, 0.05);
+}
+
+@media (max-width: 768px) {
+    .title-outline {
+        -webkit-text-stroke: 1px var(--primary-red);
+    }
+}
