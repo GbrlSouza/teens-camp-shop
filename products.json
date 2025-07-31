@@ -1,0 +1,228 @@
+{
+    "nome_loja": "Teens Camp Shop",
+    "categorias": [
+        {
+            "nome": "Feminino",
+            "produtos": [
+                {
+                    "id": "FEM001",
+                    "nome": "Camiseta Estampada 'Free Spirit'",
+                    "descricao": "Camiseta de algodão com estampa exclusiva, perfeita para o dia a dia.",
+                    "preco": 69.90,
+                    "disponivel": true,
+                    "tamanhos": ["PP", "P", "M", "G"],
+                    "cores": ["Branco", "Rosa", "Lilás"]
+                },
+                {
+                    "id": "FEM002",
+                    "nome": "Short Jeans Desfiado",
+                    "descricao": "Short jeans com lavagem clara e detalhes desfiados, super estiloso.",
+                    "preco": 99.50,
+                    "disponivel": true,
+                    "tamanhos": ["34", "36", "38", "40"],
+                    "cores": ["Azul Claro"]
+                },
+                {
+                    "id": "FEM003",
+                    "nome": "Vestido Floral Verão",
+                    "descricao": "Vestido leve e soltinho com estampa floral, ideal para os dias quentes.",
+                    "preco": 120.00,
+                    "disponivel": true,
+                    "tamanhos": ["P", "M", "G"],
+                    "cores": ["Multi-floral"]
+                },
+                {
+                    "id": "FEM004",
+                    "nome": "Moletom Cropped 'Dream Big'",
+                    "descricao": "Moletom cropped com capuz e estampa frontal, confortável e moderno.",
+                    "preco": 85.00,
+                    "disponivel": true,
+                    "tamanhos": ["PP", "P", "M"],
+                    "cores": ["Cinza Mescla", "Preto"]
+                },
+                {
+                    "id": "FEM005",
+                    "nome": "Calça Jogger Cargo",
+                    "descricao": "Calça jogger com bolsos cargo laterais, tendência e conforto.",
+                    "preco": 110.00,
+                    "disponivel": true,
+                    "tamanhos": ["P", "M", "G"],
+                    "cores": ["Caqui", "Verde Militar"]
+                },
+                {
+                    "id": "FEM006",
+                    "nome": "Saia Xadrez Plissada",
+                    "descricao": "Saia curta plissada com estampa xadrez, estilo colegial.",
+                    "preco": 75.00,
+                    "disponivel": true,
+                    "tamanhos": ["P", "M", "G"],
+                    "cores": ["Xadrez Vermelho", "Xadrez Azul"]
+                },
+                {
+                    "id": "FEM007",
+                    "nome": "Blusa Ciganinha com Babados",
+                    "descricao": "Blusa ciganinha com elástico no ombro e detalhes de babados.",
+                    "preco": 60.00,
+                    "disponivel": true,
+                    "tamanhos": ["PP", "P", "M", "G"],
+                    "cores": ["Branco", "Azul Claro", "Amarelo"]
+                },
+                {
+                    "id": "FEM008",
+                    "nome": "Macacão Curto Jeans",
+                    "descricao": "Macacão jeans curto com alças ajustáveis, casual e despojado.",
+                    "preco": 130.00,
+                    "disponivel": true,
+                    "tamanhos": ["P", "M", "G"],
+                    "cores": ["Jeans Azul"]
+                }
+            ]
+        },
+        {
+            "nome": "Masculino",
+            "produtos": [
+                {
+                    "id": "MASC001",
+                    "nome": "Camiseta Básica 'Adventure'",
+                    "descricao": "Camiseta de algodão penteado com silk discreto, essencial para o guarda-roupa.",
+                    "preco": 55.00,
+                    "disponivel": true,
+                    "tamanhos": ["P", "M", "G", "GG"],
+                    "cores": ["Preto", "Branco", "Azul Marinho"]
+                },
+                {
+                    "id": "MASC002",
+                    "nome": "Bermuda Cargo Sarja",
+                    "descricao": "Bermuda de sarja com bolsos cargo, prática e confortável.",
+                    "preco": 90.00,
+                    "disponivel": true,
+                    "tamanhos": ["38", "40", "42", "44"],
+                    "cores": ["Cáqui", "Cinza", "Verde Militar"]
+                },
+                {
+                    "id": "MASC003",
+                    "nome": "Jaqueta Corta-Vento Esportiva",
+                    "descricao": "Jaqueta corta-vento leve, ideal para atividades ao ar livre.",
+                    "preco": 150.00,
+                    "disponivel": true,
+                    "tamanhos": ["P", "M", "G", "GG"],
+                    "cores": ["Preto", "Azul Royal", "Vermelho"]
+                },
+                {
+                    "id": "MASC004",
+                    "nome": "Calça Jeans Slim Fit",
+                    "descricao": "Calça jeans com caimento slim, moderna e versátil.",
+                    "preco": 135.00,
+                    "disponivel": true,
+                    "tamanhos": ["38", "40", "42", "44", "46"],
+                    "cores": ["Jeans Escuro", "Jeans Claro"]
+                },
+                {
+                    "id": "MASC005",
+                    "nome": "Regata Estampada 'Skate Life'",
+                    "descricao": "Regata de algodão com estampa descolada, perfeita para o verão.",
+                    "preco": 45.00,
+                    "disponivel": true,
+                    "tamanhos": ["P", "M", "G"],
+                    "cores": ["Branco", "Preto", "Grafite"]
+                },
+                {
+                    "id": "MASC006",
+                    "nome": "Blusa de Moletom com Capuz",
+                    "descricao": "Moletom canguru com capuz e bolso frontal, super aconchegante.",
+                    "preco": 110.00,
+                    "disponivel": true,
+                    "tamanhos": ["P", "M", "G", "GG"],
+                    "cores": ["Cinza", "Preto", "Azul Marinho"]
+                },
+                {
+                    "id": "MASC007",
+                    "nome": "Polo Listrada Casual",
+                    "descricao": "Camisa polo em malha piquet com listras horizontais.",
+                    "preco": 80.00,
+                    "disponivel": true,
+                    "tamanhos": ["P", "M", "G"],
+                    "cores": ["Listra Azul/Branco", "Listra Preto/Cinza"]
+                },
+                {
+                    "id": "MASC008",
+                    "nome": "Short de Banho Estampado",
+                    "descricao": "Short de banho com secagem rápida e estampa divertida.",
+                    "preco": 70.00,
+                    "disponivel": true,
+                    "tamanhos": ["P", "M", "G", "GG"],
+                    "cores": ["Estampa Tropical", "Estampa Geométrica"]
+                }
+            ]
+        },
+        {
+            "nome": "Acessórios",
+            "produtos": [
+                {
+                    "id": "ACES001",
+                    "nome": "Boné Aba Reta 'Teens Camp'",
+                    "descricao": "Boné com aba reta e bordado do logo da loja, ajustável.",
+                    "preco": 45.00,
+                    "disponivel": true,
+                    "cores": ["Preto", "Branco", "Azul"]
+                },
+                {
+                    "id": "ACES002",
+                    "nome": "Mochila Escolar Urbana",
+                    "descricao": "Mochila espaçosa com compartimento para notebook, ideal para escola e dia a dia.",
+                    "preco": 180.00,
+                    "disponivel": true,
+                    "cores": ["Preto", "Cinza", "Azul Marinho"]
+                },
+                {
+                    "id": "ACES003",
+                    "nome": "Óculos de Sol Estilo Retrô",
+                    "descricao": "Óculos de sol com proteção UV e design retrô.",
+                    "preco": 75.00,
+                    "disponivel": true,
+                    "cores": ["Preto", "Tartaruga", "Transparente"]
+                },
+                {
+                    "id": "ACES004",
+                    "nome": "Meias Divertidas (Kit 3 pares)",
+                    "descricao": "Kit com 3 pares de meias coloridas e com estampas variadas.",
+                    "preco": 35.00,
+                    "disponivel": true,
+                    "cores": ["Multi-estampas"]
+                },
+                {
+                    "id": "ACES005",
+                    "nome": "Cinto de Lona Colorido",
+                    "descricao": "Cinto de lona com fivela de metal, disponível em várias cores.",
+                    "preco": 40.00,
+                    "disponivel": true,
+                    "cores": ["Preto", "Vermelho", "Azul", "Verde"]
+                },
+                {
+                    "id": "ACES006",
+                    "nome": "Carteira Jovem Compacta",
+                    "descricao": "Carteira compacta com porta-cartões e compartimento para notas.",
+                    "preco": 50.00,
+                    "disponivel": true,
+                    "cores": ["Preto", "Marrom", "Azul"]
+                },
+                {
+                    "id": "ACES007",
+                    "nome": "Pulseiras de Silicone (Kit)",
+                    "descricao": "Kit com diversas pulseiras de silicone em cores vibrantes.",
+                    "preco": 25.00,
+                    "disponivel": true,
+                    "cores": ["Multi-colorido"]
+                },
+                {
+                    "id": "ACES008",
+                    "nome": "Touca de Lã Teen",
+                    "descricao": "Touca de lã macia e confortável, ideal para dias frios.",
+                    "preco": 55.00,
+                    "disponivel": true,
+                    "cores": ["Preto", "Cinza", "Bordo"]
+                }
+            ]
+        }
+    ]
+}
