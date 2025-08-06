@@ -19,9 +19,23 @@ const adminProductsList = document.getElementById('admin-products-list');
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 
-async function init() {
+/*async function init() {
     try {
         const response = await fetch('./products.json');
+        products = await response.json();
+        
+        displayProducts();
+        updateCart();
+    } catch (error) {
+        console.error('Erro ao carregar os produtos:', error);
+        productsContainer.innerHTML = '<p class="text-center text-red-500">Erro ao carregar os produtos. Por favor, tente novamente mais tarde.</p>';
+    }
+}*/
+
+async function init() {
+    try {
+        const response = await fetch('http://127.0.0.1:5500/products.json');
+        if (!response.ok) { throw new Error('Erro ao buscar produtos da API'); }
         products = await response.json();
         
         displayProducts();
@@ -66,13 +80,13 @@ function displayProducts() {
 
 function addToCart(productId) {
     const product = products.find(p => p.id === productId);
+
     if (!product) return;
 
     const existingItem = cart.find(item => item.id === productId);
     
-    if (existingItem) {
-        existingItem.quantity += 1;
-    } else {
+    if (existingItem) { existingItem.quantity += 1; }
+    else {
         cart.push({
             id: product.id,
             name: product.name,
@@ -346,9 +360,6 @@ document.addEventListener('DOMContentLoaded', init);
 document.addEventListener('DOMContentLoaded', () => {
     displayProducts();
     updateCart();
-    
-    // Load Instagram feed (this would be replaced with actual Instagram API in production)
-    // For demo purposes, we'll just show a placeholder
 });
 
 cartBtn.addEventListener('click', () => {
