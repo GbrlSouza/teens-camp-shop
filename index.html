@@ -1,450 +1,289 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teens Camp Shop - Moda Cristã</title>
+
+    <title>Teens Camp Shop | Geração Metanoia</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap">
+
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="relative overflow-x-hidden">
-    <img src="https://cdn-icons-png.flaticon.com/512/64/64431.png" class="cross-bg w-64 top-20 left-10" alt="Cross">
-    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="lion-bg w-64 bottom-20 right-10" alt="Lion">
-    
+
+<body class="bg-gray-100 text-gray-800">
     <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
-                <h1 class="text-3xl font-bold title-outline">TEENS CAMP SHOP</h1>
-            </div>
-            
-            <nav class="hidden md:flex space-x-8">
-                <a href="#home" class="text-gray-800 hover:text-red-600 font-medium transition">Home</a>
-                <a href="#products" class="text-gray-800 hover:text-red-600 font-medium transition">Produtos</a>
-                <a href="#about" class="text-gray-800 hover:text-red-600 font-medium transition">Sobre</a>
-                <a href="#contact" class="text-gray-800 hover:text-red-600 font-medium transition">Contato</a>
-            </nav>
-            
-            <div class="flex items-center space-x-4">
-                <div class="relative cursor-pointer" id="cart-icon">
-                    <i class="fas fa-shopping-cart text-2xl text-gray-800 hover:text-red-600 transition"></i>
-                    <span class="cart-badge hidden" id="cart-count">0</span>
+                <div class="w-12 h-12 bg-red-800 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-white font-bold text-xl">TC</span>
                 </div>
-                <button class="md:hidden text-gray-800" id="mobile-menu-button">
-                    <i class="fas fa-bars text-2xl"></i>
+                <h1 class="text-2xl font-bold uppercase tracking-wider">
+                    <span class="title-outline">TEENS CAMP</span> <span class="text-red-800">SHOP</span>
+                </h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#products" class="font-semibold hover:text-red-800 transition">Produtos</a>
+                <a href="#about" class="font-semibold hover:text-red-800 transition">Sobre</a>
+                <a href="#instagram" class="font-semibold hover:text-red-800 transition">Instagram</a>
+                <a href="#location" class="font-semibold hover:text-red-800 transition">Localização</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button id="cart-btn" class="relative">
+                    <i class="fas fa-shopping-cart text-2xl text-red-800"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-red-800 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+                </button>
+                <button id="admin-btn" class="bg-gray-800 text-white px-3 py-1 rounded-md text-sm font-medium hover:bg-red-800 transition">
+                    Admin
+                </button>
+                <button id="mobile-menu-btn" class="md:hidden text-2xl text-red-800">
+                    <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
         
-        <div class="md:hidden hidden bg-white py-4 px-4 shadow-md" id="mobile-menu">
-            <a href="#home" class="block py-2 text-gray-800 hover:text-red-600">Home</a>
-            <a href="#products" class="block py-2 text-gray-800 hover:text-red-600">Produtos</a>
-            <a href="#about" class="block py-2 text-gray-800 hover:text-red-600">Sobre</a>
-            <a href="#contact" class="block py-2 text-gray-800 hover:text-red-600">Contato</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#products" class="font-semibold hover:text-red-800 transition">Produtos</a>
+                <a href="#about" class="font-semibold hover:text-red-800 transition">Sobre</a>
+                <a href="#instagram" class="font-semibold hover:text-red-800 transition">Instagram</a>
+                <a href="#location" class="font-semibold hover:text-red-800 transition">Localização</a>
+            </div>
         </div>
     </header>
-    
-    <section id="home" class="relative bg-gradient-red py-20 md:py-32 overflow-hidden">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 z-10 mb-10 md:mb-0">
-                <h2 class="text-4xl md:text-6xl font-bold title-outline mb-6">MODA COM PROPÓSITO</h2>
-                <p class="text-gray-700 text-lg mb-8">Vista sua fé com estilo. Nossas peças são mais do que moda, são uma expressão do seu amor por Cristo.</p>
-                <a href="#products" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-block shadow-lg">VER PRODUTOS</a>
-            </div>
-            <div class="md:w-1/2 z-10 flex justify-center">
-                <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                     alt="Moda Cristã" 
-                     class="rounded-lg shadow-2xl w-full max-w-md border-4 border-white">
-            </div>
+
+    <section class="bg-gradient-to-r from-red-900 to-red-700 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-6xl font-bold uppercase mb-4 tracking-wider">
+                <span class="title-outline-white">GERAÇÃO METANOIA</span>
+            </h2>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Vista-se com propósito. Nossas camisas e acessórios refletem nossa fé e identidade.</p>
+            <a href="#products" class="bg-white text-red-800 font-bold px-8 py-3 rounded-full hover:bg-gray-100 transition inline-block">Ver Produtos</a>
         </div>
     </section>
-    
-    <section class="py-16 bg-gradient-black">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold title-outline mb-12 text-center">CATEGORIAS EM DESTAQUE</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg overflow-hidden shadow-lg transition duration-300 transform hover:scale-105">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                             alt="Feminino" 
-                             class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-gray-800">Feminino</h3>
-                        <p class="text-gray-600 mb-4">Peças cheias de estilo e significado para mulheres que amam a Deus.</p>
-                        <a href="#feminino" class="text-red-600 font-medium hover:underline neon-hover">Ver coleção →</a>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-lg overflow-hidden shadow-lg transition duration-300 transform hover:scale-105">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1636&q=80" 
-                             alt="Masculino" 
-                             class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-gray-800">Masculino</h3>
-                        <p class="text-gray-600 mb-4">Estilo e atitude para homens que seguem o caminho de Cristo.</p>
-                        <a href="#masculino" class="text-red-600 font-medium hover:underline neon-hover">Ver coleção →</a>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-lg overflow-hidden shadow-lg transition duration-300 transform hover:scale-105">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1592155931584-901ac15763e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80" 
-                             alt="Acessórios" 
-                             class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-gray-800">Acessórios</h3>
-                        <p class="text-gray-600 mb-4">Complementos que completam seu look e sua fé.</p>
-                        <a href="#acessorios" class="text-red-600 font-medium hover:underline neon-hover">Ver coleção →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
+
     <section id="products" class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold title-outline mb-12 text-center">NOSSOS PRODUTOS</h2>
+            <h2 class="text-3xl font-bold uppercase text-center mb-12 tracking-wider">
+                <span class="title-outline">NOSSOS PRODUTOS</span>
+            </h2>
             
-            <div class="flex justify-center mb-12">
-                <div class="inline-flex rounded-md shadow-sm" role="group">
-                    <button type="button" class="category-tab px-4 py-2 text-sm font-medium rounded-l-lg border border-gray-200 bg-white text-gray-900 hover:bg-gray-100 hover:text-red-600 focus:z-10 focus:ring-2 focus:ring-red-500 focus:bg-red-100" data-category="feminino">
-                        Feminino
-                    </button>
-                    <button type="button" class="category-tab px-4 py-2 text-sm font-medium border-t border-b border-gray-200 bg-white text-gray-900 hover:bg-gray-100 hover:text-red-600 focus:z-10 focus:ring-2 focus:ring-red-500 focus:bg-red-100" data-category="masculino">
-                        Masculino
-                    </button>
-                    <button type="button" class="category-tab px-4 py-2 text-sm font-medium rounded-r-lg border border-gray-200 bg-white text-gray-900 hover:bg-gray-100 hover:text-red-600 focus:z-10 focus:ring-2 focus:ring-red-500 focus:bg-red-100" data-category="acessorios">
-                        Acessórios
-                    </button>
-                </div>
-            </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="products-container">
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="products-container"></div>
         </div>
     </section>
-    
-    <section id="about" class="py-16 bg-gradient-red">
+
+    <section id="about" class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
-                    <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
-                         alt="Sobre a Teens Camp Shop" 
-                         class="rounded-lg shadow-2xl w-full border-4 border-white">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h2 class="text-3xl font-bold uppercase mb-6 tracking-wider">
+                        <span class="title-outline">SOBRE NÓS</span>
+                    </h2>
+                    <p class="text-gray-700 mb-4">O Teens Camp é um grupo de jovens cristãos comprometidos com a transformação de vidas através do evangelho de Jesus Cristo.</p>
+                    <p class="text-gray-700 mb-4">Nossa loja, Geração Metanoia, representa essa mudança de mente e coração que experimentamos em Cristo.</p>
+                    <p class="text-gray-700">Cada produto foi pensado para expressar nossa identidade e valores como jovens que buscam fazer a diferença em sua geração.</p>
                 </div>
                 <div class="md:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-bold title-outline mb-6">SOBRE NÓS</h2>
-                    <p class="text-gray-700 mb-4">A Teens Camp Shop nasceu da paixão por unir moda e fé, criando peças que não apenas vestem o corpo, mas também expressam o amor por Cristo.</p>
-                    <p class="text-gray-700 mb-6">Nossa missão é oferecer produtos de qualidade que inspirem os jovens a viverem sua fé com autenticidade e estilo, em todos os momentos do dia a dia.</p>
-                    <div class="flex flex-wrap gap-4">
-                        <div class="bg-white p-4 rounded-lg shadow-md flex-1 min-w-[200px]">
-                            <h3 class="text-red-600 font-bold text-xl mb-2">+1000</h3>
-                            <p class="text-gray-600">Clientes Satisfeitos</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-lg shadow-md flex-1 min-w-[200px]">
-                            <h3 class="text-red-600 font-bold text-xl mb-2">+500</h3>
-                            <p class="text-gray-600">Produtos Diferentes</p>
-                        </div>
+                    <div class="bg-red-800 rounded-lg overflow-hidden">
+                        <img src="./img/logoteenscamp.jpeg" 
+                             alt="Grupo de jovens do Teens Camp" 
+                             class="w-full h-auto opacity-90 hover:opacity-100 transition">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <section class="py-16 bg-gradient-black">
+
+    <section id="instagram" class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold title-outline mb-12 text-center">O QUE DIZEM NOSSOS CLIENTES</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Cliente" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <h4 class="font-bold">Ana Carolina</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
+            <h2 class="text-3xl font-bold uppercase text-center mb-12 tracking-wider">
+                <span class="title-outline">NOSSO INSTAGRAM</span>
+            </h2>
+            <div class="flex justify-center">
+                <div id="instagram-feed" class="w-full max-w-4xl">
+                    <div class="text-center py-8">
+                        <i class="fab fa-instagram text-4xl text-red-800 mb-4"></i>
+                        <p class="text-gray-700">Siga-nos no Instagram <a href="https://www.instagram.com/teenscamp_setor3?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-red-800 font-semibold">@teenscamp</a></p>
                     </div>
-                    <p class="text-gray-600">"Adoro as peças da Teens Camp! São lindas, confortáveis e ainda transmitem uma mensagem de fé. Sempre recebo elogios quando uso!"</p>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Cliente" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <h4 class="font-bold">Ricardo Almeida</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600">"Compro sempre as camisetas masculinas. A qualidade é excelente e o atendimento é muito bom. Recomendo!"</p>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <h4 class="font-bold">Juliana Santos</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600">"Comprei um vestido para um evento da igreja e amei! O material é de ótima qualidade e o design é lindo. Com certeza vou comprar mais."</p>
                 </div>
             </div>
         </div>
     </section>
-    
-    <section id="contact" class="py-16 bg-white">
+
+    <section id="location" class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold uppercase text-center mb-12 tracking-wider">
+                <span class="title-outline">ONDE ESTAMOS</span>
+            </h2>
             <div class="flex flex-col md:flex-row">
-                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
-                    <h2 class="text-3xl md:text-4xl font-bold title-outline mb-6">FALE CONOSCO</h2>
-                    <p class="text-gray-700 mb-6">Tem alguma dúvida, sugestão ou quer saber mais sobre nossos produtos? Entre em contato conosco!</p>
-                    
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-4"></i>
-                            <div>
-                                <h4 class="font-bold text-gray-800">Endereço</h4>
-                                <p class="text-gray-600">Rua da Fé, 123 - Centro, Cidade - Estado</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <i class="fas fa-phone-alt text-red-600 mt-1 mr-4"></i>
-                            <div>
-                                <h4 class="font-bold text-gray-800">Telefone</h4>
-                                <p class="text-gray-600">(11) 98765-4321</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <i class="fas fa-envelope text-red-600 mt-1 mr-4"></i>
-                            <div>
-                                <h4 class="font-bold text-gray-800">Email</h4>
-                                <p class="text-gray-600">contato@teenscampshop.com.br</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-8">
-                        <h4 class="font-bold text-gray-800 mb-4">Siga-nos nas redes sociais</h4>
-                        <div class="flex space-x-4">
-                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-red-600 hover:text-white transition">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-red-600 hover:text-white transition">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-red-600 hover:text-white transition">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                        </div>
-                    </div>
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-xl font-bold text-red-800 mb-4">Assembleia de Deus - Ministério Belém Campinas</h3>
+                    <p class="text-gray-700 mb-4">Setor Campineiro</p>
+                    <p class="text-gray-700 mb-4">R. Ozualdo Rodrigues, 222 - Jardim Campineiro, Campinas - SP</p>
+                    <p class="text-gray-700">Reuniões: Domingos às 19h | Quartas às 20h</p>
                 </div>
-                
                 <div class="md:w-1/2">
-                    <form class="bg-gray-50 p-6 rounded-lg shadow-md">
-                        <div class="mb-4">
-                            <label for="name" class="block text-gray-700 font-medium mb-2">Nome</label>
-                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
-                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="subject" class="block text-gray-700 font-medium mb-2">Assunto</label>
-                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="message" class="block text-gray-700 font-medium mb-2">Mensagem</label>
-                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-md transition duration-300 w-full">ENVIAR MENSAGEM</button>
-                    </form>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d919.1928023364533!2d-47.118645943884104!3d-22.847952637606262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c7472e136333%3A0xdc504daebd65638e!2sIgreja%20Evang%C3%A9lica%20Assembl%C3%A9ia%20de%20Deus!5e0!3m2!1spt-BR!2sbr!4v1754442030379!5m2!1spt-BR!2sbr" 
+                                width="100%" 
+                                height="300" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="rounded-lg"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <footer class="bg-gray-900 text-white py-12">
+
+    <footer class="bg-gray-900 text-white py-8">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-2xl font-bold title-outline mb-4">TEENS CAMP SHOP</h3>
-                    <p class="text-gray-400">Moda com propósito para jovens que amam a Deus.</p>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-4">Links Úteis</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Política de Privacidade</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Termos de Serviço</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Trocas e Devoluções</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-4">Minha Conta</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Minha Conta</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Meus Pedidos</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Lista de Desejos</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Newsletter</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-4">Pagamento Seguro</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Visa" class="h-8">
-                        <img src="https://cdn-icons-png.flaticon.com/512/196/196561.png" alt="Mastercard" class="h-8">
-                        <img src="https://cdn-icons-png.flaticon.com/512/888/888870.png" alt="Pix" class="h-8">
-                        <img src="https://cdn-icons-png.flaticon.com/512/888/888854.png" alt="Boleto" class="h-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-red-800 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold text-sm">TC</span>
+                        </div>
+                        <h2 class="text-xl font-bold uppercase tracking-wider">
+                            <span class="text-white">TEENS CAMP</span> <span class="text-red-400">SHOP</span>
+                        </h2>
                     </div>
+                    <p class="text-gray-400 mt-2">Gabriel Costa de Souza - © 2025</p>
                 </div>
-            </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2023 Teens Camp Shop. Todos os direitos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/teenscamp_setor3?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="https://l.instagram.com/?u=https%3A%2F%2Fchat.whatsapp.com%2FEaebzbbpXJQAQv6T5XeiAD%3Fmode%3Dac_t%26fbclid%3DPAZXh0bgNhZW0CMTEAAafUJay47Y5QMHGSj3F5rxyoW5tkoqt-YdhyEEv0czMYYYh56X8kfeqJi098eg_aem_pQmKKz5vP97CW8jyTjsl9w&e=AT1KaxuoqOd3-qhKqLxAu2ff8eJnVxy47z41sIm6OPGLXixhb35H8hUmFAPDx52MfPP3NDHapIgkJe4iBNwlxuVOIXpxHKnkkCxy3ZI" class="text-gray-400 hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
         </div>
     </footer>
-    
-    <div class="fixed inset-0 z-50 hidden" id="cart-modal">
+
+    <div id="cart-modal" class="fixed inset-0 z-50 hidden">
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div class="relative h-full w-full flex items-center justify-center p-4">
-            <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] flex flex-col">
-                <div class="p-6 border-b border-gray-200 flex justify-between items-center">
-                    <h3 class="text-xl font-bold">Seu Carrinho</h3>
-                    <button id="close-cart" class="text-gray-500 hover:text-gray-700">
-                        <i class="fas fa-times"></i>
+        <div class="absolute right-0 top-0 h-full w-full max-w-md bg-white shadow-xl overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold uppercase">
+                        <span class="title-outline">SEU CARRINHO</span>
+                    </h3>
+                    <button id="close-cart" class="text-gray-500 hover:text-red-800">
+                        <i class="fas fa-times text-2xl"></i>
                     </button>
                 </div>
                 
-                <div class="p-6 overflow-y-auto flex-grow" id="cart-items-container">
-                    <div class="text-center py-10" id="empty-cart-message">
-                        <i class="fas fa-shopping-cart text-4xl text-gray-300 mb-4"></i>
-                        <p class="text-gray-500">Seu carrinho está vazio</p>
+                <div id="cart-items" class="mb-6">
+                    <p class="text-gray-500 text-center py-8">Seu carrinho está vazio</p>
+                </div>
+                
+                <div class="border-t border-gray-200 pt-4 mb-6">
+                    <div class="flex justify-between mb-2">
+                        <span class="font-semibold">Subtotal:</span>
+                        <span id="cart-subtotal" class="font-bold">R$ 0,00</span>
                     </div>
                 </div>
                 
-                <div class="p-6 border-t border-gray-200">
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="font-bold">Total:</span>
-                        <span class="font-bold text-xl" id="cart-total">R$ 0,00</span>
-                    </div>
-                    <button id="checkout-button" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-md transition duration-300 w-full disabled:opacity-50" disabled>
-                        FINALIZAR COMPRA
-                    </button>
-                </div>
+                <button id="checkout-btn" class="w-full bg-red-800 text-white py-3 rounded-md font-bold hover:bg-red-900 transition disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                    Finalizar Compra via WhatsApp
+                </button>
             </div>
         </div>
     </div>
-    
-    <div class="fixed inset-0 z-50 hidden" id="quick-view-modal">
-        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div class="relative h-full w-full flex items-center justify-center p-4">
-            <div class="bg-white rounded-lg shadow-xl w-full max-w-4xl max-h-[90vh] flex flex-col">
-                <div class="p-6 border-b border-gray-200 flex justify-between items-center">
-                    <h3 class="text-xl font-bold" id="quick-view-title">Detalhes do Produto</h3>
-                    <button id="close-quick-view" class="text-gray-500 hover:text-gray-700">
-                        <i class="fas fa-times"></i>
+
+    <div id="admin-login-modal" class="fixed inset-0 z-50 hidden admin-modal">
+        <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+            <div class="bg-white rounded-lg p-8 max-w-md w-full">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold uppercase">
+                        <span class="title-outline">PAINEL ADMIN</span>
+                    </h3>
+                    <p class="text-gray-600 mt-2">Acesso restrito</p>
+                </div>
+                
+                <form id="admin-login-form">
+                    <div class="mb-4">
+                        <label for="username" class="block text-gray-700 font-medium mb-2">Usuário</label>
+                        <input type="text" id="username" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-800">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="password" class="block text-gray-700 font-medium mb-2">Senha</label>
+                        <input type="password" id="password" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-800">
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-red-800 text-white py-3 rounded-md font-bold hover:bg-red-900 transition">
+                        Entrar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="admin-panel-modal" class="fixed inset-0 z-50 hidden admin-modal">
+        <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+            <div class="bg-white rounded-lg p-8 w-full max-w-4xl max-h-screen overflow-y-auto">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold uppercase">
+                        <span class="title-outline">PAINEL ADMINISTRATIVO</span>
+                    </h3>
+                    <button id="close-admin-panel" class="text-gray-500 hover:text-red-800">
+                        <i class="fas fa-times text-2xl"></i>
                     </button>
                 </div>
                 
-                <div class="p-6 overflow-y-auto flex-grow grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="flex justify-center">
-                        <img src="" alt="" class="rounded-lg max-h-96" id="quick-view-image">
-                    </div>
-                    <div>
-                        <h4 class="text-2xl font-bold mb-2" id="quick-view-product-name"></h4>
-                        <div class="flex items-center mb-4">
-                            <div class="flex text-yellow-400 mr-2">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <span class="text-gray-500">(12 avaliações)</span>
+                <div class="mb-8">
+                    <h4 class="text-xl font-semibold mb-4 text-red-800">Adicionar Novo Produto</h4>
+                    <form id="add-product-form" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="product-name" class="block text-gray-700 font-medium mb-2">Nome do Produto</label>
+                            <input type="text" id="product-name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-800" required>
                         </div>
                         
-                        <p class="text-gray-700 mb-6" id="quick-view-description"></p>
-                        
-                        <div class="mb-6">
-                            <span class="text-3xl font-bold" id="quick-view-price"></span>
+                        <div>
+                            <label for="product-price" class="block text-gray-700 font-medium mb-2">Preço (R$)</label>
+                            <input type="number" id="product-price" step="0.01" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-800" required>
                         </div>
                         
-                        <div class="mb-6">
-                            <h5 class="font-bold mb-2">Cores disponíveis:</h5>
-                            <div class="flex flex-wrap gap-2" id="quick-view-colors">
-                                </div>
+                        <div>
+                            <label for="product-image" class="block text-gray-700 font-medium mb-2">URL da Imagem</label>
+                            <input type="text" id="product-image" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-800" required>
                         </div>
                         
-                        <div class="mb-6">
-                            <h5 class="font-bold mb-2">Tamanhos:</h5>
-                            <div class="flex flex-wrap gap-2" id="quick-view-sizes">
-                                </div>
+                        <div>
+                            <label for="product-category" class="block text-gray-700 font-medium mb-2">Categoria</label>
+                            <select id="product-category" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-800">
+                                <option value="camisetas">Camisetas</option>
+                                <option value="acessorios">Acessórios</option>
+                            </select>
                         </div>
                         
-                        <div class="flex items-center gap-4">
-                            <div class="flex items-center border border-gray-300 rounded-md">
-                                <button class="px-3 py-1 text-xl" id="decrease-quantity">-</button>
-                                <span class="px-3 py-1 border-x border-gray-300" id="quantity">1</span>
-                                <button class="px-3 py-1 text-xl" id="increase-quantity">+</button>
-                            </div>
-                            <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-md transition duration-300 flex-grow" id="add-to-cart-quick-view">
-                                Adicionar ao Carrinho
+                        <div class="md:col-span-2">
+                            <label for="product-description" class="block text-gray-700 font-medium mb-2">Descrição</label>
+                            <textarea id="product-description" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-800"></textarea>
+                        </div>
+                        
+                        <div class="md:col-span-2">
+                            <button type="submit" class="bg-red-800 text-white px-6 py-2 rounded-md font-bold hover:bg-red-900 transition">
+                                Adicionar Produto
                             </button>
                         </div>
-                    </div>
+                    </form>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-semibold mb-4 text-red-800">Produtos Cadastrados</h4>
+                    <div id="admin-products-list" class="space-y-4"></div>
                 </div>
             </div>
         </div>
     </div>
-    
-    <div class="fixed bottom-4 right-4 z-50 hidden" id="toast-notification">
-        <div class="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg flex items-center">
-            <i class="fas fa-check-circle mr-2"></i>
-            <span id="toast-message">Produto adicionado ao carrinho!</span>
-        </div>
-    </div>
-    
-    <script src="script.js"></script>
+
+    <script src="./script.js"></script>
 </body>
+
 </html>
